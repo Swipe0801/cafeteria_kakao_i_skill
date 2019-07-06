@@ -24,6 +24,9 @@ def todaybf(today):
     soup = BeautifulSoup(html, 'html.parser')
     findfind = findfind.find.all("tr")
     findfind = findfind[2].find.all("td")
+    
+    for school in soup.select('<div id="genWeekDiet_1_txbMon" class="w2textbox "', ''):
+       answer = (school.text)
 
 def yesterdaybf(yesterday):
     str = str
@@ -36,6 +39,9 @@ def yesterdaybf(yesterday):
     soup = BeautifulSoup(html, 'html.parser')
     findfind = findfind.find.all("tr")
     findfind = findfind[2].find.all("td")
+    
+    for school in soup.select('<div id="genWeekDiet_1_txbMon" class="w2textbox "', ''):
+       answer = (school.text)
 
 
 def weekbf(week):
@@ -49,6 +55,9 @@ def weekbf(week):
     soup = BeautifulSoup(html, 'html.parser')
     findfind = findfind.find.all("tr")
     findfind = findfind[2].find.all("td")
+    
+    for school in soup.select('<div id="genWeekDiet_1_txbMon" class="w2textbox "', ''):
+       answer = (school.text)
 
 def maindef():
     req = request.get_json()
